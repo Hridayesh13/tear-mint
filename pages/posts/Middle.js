@@ -14,7 +14,7 @@ function Middle(){
         <div className="grid flex-grow place-items-center"> 
             <h1 className="m-2 mt-5 text-4xl text-justify "> Get yours now!!! </h1>
         
-            <Link href="/posts/mintingFrontPage">
+            <Link href="/posts/mint">
             <a className="text-xl font-bold ">Mint</a>
             </Link>
 

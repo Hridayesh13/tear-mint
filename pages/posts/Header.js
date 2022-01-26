@@ -11,22 +11,7 @@ import { useEffect, useState } from 'react'
 import Web3Modal from "web3modal"
 
 import { ethers , BigNumber} from 'ethers';
-
-function Header(){
-
-    const [user , setUser] = useState("Connect wallet");
-
-    async function ConnectWallet(){
-
-        const web3Modal = new Web3Modal();
-        const connection = await web3Modal.connect();
-    
-        const provider = new ethers.providers.Web3Provider(connection)
-        const signer = await provider.getSigner();
-        const signerAddress = await signer.getAddress();
-        setUser(signerAddress);
-
-    }
+export default function Header(){
 
 
     return(
@@ -40,23 +25,16 @@ function Header(){
             <Link href="/posts/about">
             <a className="text-xl font-bold ">About</a>
             </Link>
-            <Link href="/posts/mintingFrontPage">
+            <Link href="/posts/mint">
             <a className="text-xl font-bold ">Mint</a>
             </Link>
         </div>
         
-        { 
-            <button className=" py-1 px-4 rounded bg-[#4FBDBA] text-white hover:bg-[#35858B]"
-            onClick={ConnectWallet}>
-            {user}
-          </button> 
-             
-        }
+        <HeaderItem />
         
         </header>
     )
 }
 
-export default Header
 
 

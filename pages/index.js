@@ -7,7 +7,6 @@ import Link from 'next/link'
 // import { eventDoesNotExist } from '@chainlink/test-helpers/dist/src/matchers';
 // import { parseTransaction } from 'ethers/lib/utils';
 
-
 export default function Home() {
 
   return (
@@ -15,8 +14,6 @@ export default function Home() {
 
       <Header />
       <Middle />
-     
-     {/* foolter ----------------- */}
 
     </div>
   )
