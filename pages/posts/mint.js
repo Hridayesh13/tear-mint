@@ -12,7 +12,7 @@ function expandTo18Decimals(n) {
   return BigNumber.from(n).mul(BigNumber.from(10).pow(18))
 }
 
-export default function mint() {
+export default function Mint() {
 
   const [userAccount, setUserAccount] = useState()
   const [recAccount, setRecAccount] = useState()
